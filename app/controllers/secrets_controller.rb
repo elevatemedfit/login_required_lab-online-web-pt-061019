@@ -1,6 +1,6 @@
 class SecretsController < ApplicationController
   def show
-    if session.include? :name
+    if current_user?
       render :show
     else
       redirect_to '/login'
