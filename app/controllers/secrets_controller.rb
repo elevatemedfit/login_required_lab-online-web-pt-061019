@@ -7,7 +7,7 @@ class SecretsController < ApplicationController
     if current_user
       render :show
     else
-      redirect_to '/login'
+      redirect_to '/new'
     end
   end
 
