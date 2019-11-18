@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  get '/home' => 'sessions/home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'application#hello'
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
+
+  get '/new' => 'sessions#new'
+  post '/create' => 'sessions#create'
   post '/logout' => 'sessions#destroy'
   get '/show' => 'secrets#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
