@@ -4,7 +4,7 @@ class SecretsController < ApplicationController
   skip_before_action :require_login, only: [:show]
 
   def show
-    if current_user.include? :name
+    if current_user
       render :show
     else
       redirect_to '/login'
